@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Predição de Câncer de Mama</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Predição de Câncer de Mama</h1>
+
+		<div class="info-box">
+			<p><strong>Como usar:</strong></p>
+			<p>
+				Preencha os campos abaixo com dados reais de exame (extraídos de análise de imagem médica).
+				Esses valores representam características do tumor, como tamanho, textura e forma.
+			</p>
+			<p>
+				⚠️ Este sistema é apenas um apoio e não substitui avaliação médica.
+			</p>
+		</div>
+
+		<form id="predictionForm">
+			<label>
+				Raio Médio
+				<input type="number" step="any" name="radius_mean" placeholder="Ex: 14.5" required />
+			</label>
+
+			<label>
+				Textura Média
+				<input type="number" step="any" name="texture_mean" placeholder="Ex: 20.1" required />
+			</label>
+
+			<label>
+				Perímetro Médio
+				<input type="number" step="any" name="perimeter_mean" placeholder="Ex: 95.0" required />
+			</label>
+
+			<label>
+				Área Média
+				<input type="number" step="any" name="area_mean" placeholder="Ex: 650.0" required />
+			</label>
+
+			<label>
+				Suavidade Média
+				<input type="number" step="any" name="smoothness_mean" placeholder="Ex: 0.10" required />
+			</label>
+
+			<label>
+				Concavidade Média
+				<input type="number" step="any" name="concavity_mean" placeholder="Ex: 0.12" required />
+			</label>
+
+			<label>
+				Pontos Côncavos Médios
+				<input type="number" step="any" name="concave_points_mean" placeholder="Ex: 0.08" required />
+			</label>
+
+			<label>
+				Simetria Média
+				<input type="number" step="any" name="symmetry_mean" placeholder="Ex: 0.18" required />
+			</label>
+
+			<button class="full" type="submit">Prever</button>
+		</form>
+
+		<div id="result">Resultado aparecerá aqui.</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
